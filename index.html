@@ -7,47 +7,50 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   
- <meta property="og:image" content="https://raw.githubusercontent.com/mlveltri/veltmon.github.io/master/img/bg-masthead.jpg"/>
+ <meta property="og:image" content="https://raw.githubusercontent.com/mlveltri/veltmon.github.io/master/img/cover-social.png"/>
 
- <meta property="og:image:alt" content="VELTMON | Boutique Consulting Services for your Digital Business" />
+ <meta property="og:image:alt" content="VELTMON Digital Business Strategy Consulting LLC" />
     
- <meta property="og:description" content="VELTMON Digital Business Strategy Consulting LLC" />
+ <meta property="og:description" content="Founded in May 2019 in the United States of America with the ambition to become a unique type of niche digital consulting agency, today, under the inspiration of the eclectic city of New York, Veltmon is an international collective network of passionate minds with hands-on experience and competencies at the intersection between digital marketing, business modeling strategy and performance analysis..." />
 
  <meta property="og:url" content="https://www.veltmon.com" />
 
  <meta property="og:type" content="website"/>
 
- <meta property="og:title" content="VELTMON | Boutique Consulting Services for your Digital Business" />
+ <meta property="og:title" content="Influencer Marketing & Digital Business Strategy" />
 
 
-  <meta name="description" content="Veltmon is a young boutique consulting company based in the United States of America, specialized in Influencer Marketing Strategy & Digital Business Development">
+  <meta name="description" content="Veltmon is a young boutique consulting agency born and based in the United States of America, specialized in Influencer Marketing & Digital Business Strategy">
   
   <meta name="author" content="VELTMON Digital Business Strategy Consulting LLC">
 
-  <title>Veltmon | We Help Influencers And Brands Stand Out From The Competition + Identify Growth Opportunities.</title>
+
+
+  <title>VELTMON</title>
+
+
 
    <META HTTP-EQUIV="EXPIRES" CONTENT="Mon, 10 Jul 2030 10:07:20 GMT">
 
 
   <!-- Font Awesome Icons -->
   <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
-   <script src="https://use.fontawesome.com/fb6df17246.js"></script>
-
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700" rel="stylesheet">
-  <link href='https://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic' rel='stylesheet' type='text/css'>
+  <script src="https://use.fontawesome.com/fb6df17246.js"></script>
 
   <!-- Plugin CSS -->
   <link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
 
   <!-- Theme CSS - Includes Bootstrap -->
   <link href="css/creative.min.css" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Audiowide|Hammersmith+One|Righteous&display=swap" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans|Syncopate|Lato|Roboto " rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Audiowide" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
 
 
     <!-- Favicon-->
-    <link rel="shortcut icon" href="favicon.png">
+    <link rel="shortcut icon" href="favicon-veltmon.svg">
+
+
 
 
 
@@ -62,606 +65,336 @@
 </script>
 
 
-<!-- Facebook Pixel Code -->
-<script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', '1393591484126068');
-  fbq('track', 'PageView');
-</script>
-<noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=1393591484126068&ev=PageView&noscript=1"
-/></noscript>
-<!-- End Facebook Pixel Code -->
 
 
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/ce22fdd832869280ceb3587d4/7e0ad00daf9ba36981e3b39bc.js");</script>
+<script> var TxtRotate = function(el, toRotate, period) {
+  this.toRotate = toRotate;
+  this.el = el;
+  this.loopNum = 0;
+  this.period = parseInt(period, 10) || 500;
+  this.txt = '';
+  this.tick();
+  this.isDeleting = false;
+};
+
+TxtRotate.prototype.tick = function() {
+  var i = this.loopNum % this.toRotate.length;
+  var fullTxt = this.toRotate[i];
+
+  if (this.isDeleting) {
+    this.txt = fullTxt.substring(0, this.txt.length - 5);
+  } else {
+    this.txt = fullTxt.substring(0, this.txt.length + 4);
+  }
+
+  this.el.innerHTML = '<span class="wrap">'+this.txt+'</span>';
+
+  var that = this;
+  var delta = 300 - Math.random() * 100;
+
+  if (this.isDeleting) { delta /= 2; }
+
+  if (!this.isDeleting && this.txt === fullTxt) {
+    delta = this.period;
+    this.isDeleting = true;
+  } else if (this.isDeleting && this.txt === '') {
+    this.isDeleting = false;
+    this.loopNum++;
+    delta = 500;
+  }
+
+  setTimeout(function() {
+    that.tick();
+  }, delta);
+};
+
+window.onload = function() {
+  var elements = document.getElementsByClassName('txt-rotate');
+  for (var i=0; i<elements.length; i++) {
+    var toRotate = elements[i].getAttribute('data-rotate');
+    var period = elements[i].getAttribute('data-period');
+    if (toRotate) {
+      new TxtRotate(elements[i], JSON.parse(toRotate), period);
+    }
+  }
+  // INJECT CSS
+  var css = document.createElement("style");
+  css.type = "text/css";
+  css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+  document.body.appendChild(css);
+};</script>
 
 
 
 </head>
 
+
+
+
+
 <body id="page-top">
-
-<!-- Load Facebook SDK for JavaScript -->
-      <div id="fb-root"></div>
-      <script>
-        window.fbAsyncInit = function() {
-          FB.init({
-            xfbml            : true,
-            version          : 'v4.0'
-          });
-        };
-
-        (function(d, s, id) {
-        var js, fjs = d.getElementsByTagName(s)[0];
-        if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
-        js.src = 'https://connect.facebook.net/en_US/sdk/xfbml.customerchat.js';
-        fjs.parentNode.insertBefore(js, fjs);
-      }(document, 'script', 'facebook-jssdk'));</script>
-
-      <!-- Your customer chat code -->
-      <div class="fb-customerchat"
-        attribution=setup_tool
-        page_id="102249321144688"
-  theme_color="#ffc109">
-      </div>
-  
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
-    <div class="container" style="font-family:'PT Mono', monospace;">
-      <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-family:'Audiowide'">veltmon</a>
-      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarResponsive">
-        <ul class="navbar-nav ml-auto my-2 my-lg-0">
-         <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#researchanalysis" style="font-family:'PT Mono', monospace;">.INTELLIGENCE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#partners" style="font-family:'PT Mono', monospace;">.Clients</a>
-          </li>-->
+    <div class="container">
+           <a class="navbar-brand js-scroll-trigger" href="#page-top" style="font-family:'Audiowide'; font-color:#6515dd;">VELTMON</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                 <span class="navbar-toggler-icon"></span>
+                </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+         <ul class="navbar-nav ml-auto my-2 my-lg-0" >
 
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#about" style="font-family:'PT Mono', monospace;">.WHO WE ARE</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#expertise" style="font-family:'PT Mono', monospace;">.OUR EXPERTISE</a>
-          </li>
 
-          <!--<li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#services" style="font-family:'PT Mono', monospace;">.WEBINARS</a>
-          </li>-->
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#about" style="font-weight: 500";>OUR STORY</a>
+                    </li>
 
-         <!-- <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#researchanalysis" style="font-family:'PT Mono', monospace;">.REPORTS</a>
-          </li>-->
-          <!--<li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#partners" style="font-family:'PT Mono', monospace;">.Data_Partners</a>
-          </li>-->
-          <li class="nav-item">
-            <a class="nav-link js-scroll-trigger" href="#contact" style="font-family:'PT Mono', monospace;">.CONTACT</a>
-          </li>
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#manifesto" style="font-weight: 500";>MANIFESTO</a>
+                    </li>
+
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#expertise" style="font-weight: 500";>OFFERINGS</a>
+                    </li>
+          
+                    
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#perspectives" style="font-weight: 500";>PERSPECTIVES</a>
+                    </li>
+          
+                    <li class="nav-item">
+                      <a class="nav-link js-scroll-trigger" href="#contact" style="font-weight: 500";>CONTACT</a>
+                    </li>
         </ul>
+
       </div>
+
+    </div>
     </div>
   </nav>
 
+
+
   <!-- Masthead -->
   <header class="masthead">
-    <div class="container h-100" style="font-family:'PT Mono', monospace;"> 
-      <div class="row h-100 align-items-center justify-content-center text-center">
-        <div class="col-lg-10 align-self-end">
-        	<br>
-          	<br>
-          <!--<h4 class=" text-white font-weight-bold" style="font-family:'PT Mono', monospace;">Elevate your Digital Business Strategy to the next level!</h4>-->
-          <hr class="divider my-6">
+    <div class="container h-100" > 
+      <div class="row h-100 align-items-center justify-content-center text-center" style="font-color:#fbb81b">
+        <div class="col-lg-10 align-self-end" style="font-color:#fbb81b">
+   
+              <h3 class="card-title h1 mb-0" ><span class="card-title-decoration"></span>We help storytellers and brands</h3>
+              
+              <p><h3 class="card-title h1 mb-0" style="color:#6515dd";><span class="card-title-decoration"><span  class="txt-rotate" data-period="500" data-rotate='["analyze their performance.", "measure their impact.", "build new opportunities.", "get the full picture.", "gain a winning perspective."]'></span></span></h3>
+                                        
         </div>
         <div class="col-lg-8 align-self-baseline">
           <p class="text-white-75 font-weight-light mb-5"><p/>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://resources.veltmon.com/subscriptions/">stay in the loop</a>
+
         </div>
       </div>
     </div> 
-
-  <!-- Slideshow
-
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
-    <ol class="carousel-indicators">
-      <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-      <li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-     Slide One - Set the background image for this slide in the line below 
-
-      <div class="carousel-item active" style="background-image: url('img/slideshow/1.png')">
-         <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4"></h3>
-          <p class="lead"></p>
-        </div>
-      </div>
-
-
-  Slide Two - Set the background image for this slide in the line below 
-
-      <div class="carousel-item" style="background-image: url('img/slideshow/2.png')">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4"></h3>
-          <p class="lead"></p>
-        </div>
-      </div>
-
- Slide Three - Set the background image for this slide in the line below 
-
-      <div class="carousel-item" style="background-image: url('img/slideshow/3.png')">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4"></h3>
-          <p class="lead"></p>
-        </div>
-      </div>
-
- Slide 4 - Set the background image for this slide in the line below 
-      <div class="carousel-item" style="background-image: url('img/slideshow/4.png')">
-        <div class="carousel-caption d-none d-md-block">
-          <h3 class="display-4"></h3>
-          <p class="lead"></p>
-        </div>
-      </div>
-    </div>
-        </div>
-
-    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="sr-only">Previous</span>
-        </a>
-    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="sr-only">Next</span>
-        </a>
-  </div> -->
-
-  </header> 
-
-
-
-    <!-- Clients -->
-  <section class="py-5" id="clients">
-  	<div class="container">
-  	<h5 class="text-center mt-0">Who trusted us</h5>
-         <a class="portfolio-box" href="img/portfolio/fullsize/logo-clients.png">
-            <img class="img-fluid" src="img/portfolio/fullsize/logo-clients.png" alt="Veltmon's Clients"> </a>
-
-    <!-- <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/pulse.png" alt="Data and Tech Partner">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/beiersdorf.png" alt="Data and Tech Partner">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/dentsu.png" alt="Data and Tech Partner">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/barbour.png" alt="Data and Tech Partner">
-          </a>
-        </div>
-      </div>
-    </div>
-
-<br><br><br>
-
-  <div class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/feelingfelt.png" alt="Data and Tech Partner">
-          </a>
-        </div>
-       <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/ferrero.png" alt="Data and Tech Partner">
-          </a>
-        </div>
-
-         <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/timberland.png" alt="Data and Tech Partner">
-          </a>
-        </div>
-
-         <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/womsh.png" alt="Data and Tech Partner">
-          </a>
-        </div>
-
-      </div>-->
-    </div>
-
-
-
-  </section>
-
-    <!-- Data Partners -->
-  <section class="py-5" id="partners">
-    <div class="container">
-    	<h5 class="text-center mt-0">Data Partners</h5>
-
-               <a class="portfolio-box" href="img/portfolio/fullsize/logo-partners.png">
-            <img class="img-fluid" src="img/portfolio/fullsize/logo-partners.png" alt="Veltmon's Data Partners"> </a>
-
-      <!--<div class="row">
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/google.png" alt="Veltmon's Data Partners">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/amazon.png" alt="Veltmon's Data Partners">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/euromonitor.png" alt="Veltmon's Data Partners">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/statista.png" alt="Veltmon's Data Partners">
-          </a>
-        </div> -->
-      </div>
-    </div>
-  </section>
-
-
-
+  </header>
 
 
   <!-- Who we are Section -->
-  <section class="page-section bg-primary" id="about">
-    <div class="container" style="font-family:'PT Mono', monospace;">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="text-white mt-0">Who we are</h2>
-          <hr class="divider light my-4">
-          <p class=" text-left">Veltmon is a young boutique consulting company born and based in the United States of America. </p>
+  <section class="page-section" id="about">
 
-          <p class=" text-left">Our Mission is to empower high-end talents, storytellers, celebrities and consumer brands advising them on practical strategies to generate growth, reach new markets, and maximize profits across the internet + social media platforms.</p>
+<h2 class="text-center mt-0">Genesis</h2>
+  <hr class="divider my-4">
+    <div class="container" >
+      <div class="row">
+        <div class="col-lg-4">
+          <img class="img-fluid d-block mx-auto" src="img/marialorenza-veltri-founder.svg" alt="Maria Lorenza Veltri Founder at Veltmon Digital Business Strategy Consultig Agency"></img>
 
-          <p class=" text-left">We provide relevant, distilled knowledge and high-quality intelligence insights to help our clientele get the right piece of information to stand out from the competition and to identify opportunities to maximize the impact of their digital investments.</p>
-          <a class="btn btn-light btn-xl js-scroll-trigger" href="#expertise">Find Out More!</a>
+
+            <div style="line-height: 5px";>
+
+                <p><p class="text-center" style="font-family: 'Lato', sans-serif;"><strong>Maria Lorenza Veltri </strong></p>
+                <p><p class="text-center" style="font-family: 'Lato', sans-serif;">Founder & CEO</p> 
+
+
+                <div style="text-align:center;">
+                  <a  href="https://www.linkedin.com/in/marialorenzaveltri/">
+                            <svg width="15" height="15" viewBox="0 0 448 512" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z" fill="currentColor" />
+                            </svg>
+                  </a>
+                </div>
+        </div>
+
+    </p>
+</div>
+
+
+        <div class="col-lg-4"  style="font-family: 'Lato', sans-serif; text-align: justify; text-justify: inter-word;">
+          <p>Founded in May 2019 in the United States of America with the ambition to become a unique type of niche digital consulting agency, today, under the inspiration of the eclectic city of New York, Veltmon is an international collective network of passionate minds with hands-on experience and competencies at the intersection between digital marketing, business modeling strategy and performance analysis. 
+
+          <p>In the last decade, the internet and the social media platforms have become a complex and fragmented overload of information, what we have been learning is that brands and individuals with vibrant online communities are perceived more culturally credible to consumers who, nowadays, don't want to buy a brand, they want to join it.
+
+          <p>In this noisy speed changing environment, only who meet the moment will survive. </p>
+
+
+        </div>
+
+
+        <div class="col-lg-4" style="font-family: 'Lato', sans-serif; text-align: justify; text-justify: inter-word;">
+          
+        <p>Our mission is to give storytellers a clear, unique, contextualized perspective to help them to meet the moment. </p>
+          
+
+          <p><i>We collect, measure, analyze relevant information and transform it into actionable insights.</i></p>
+
+          <p>We help brands be the moment.</p>
         </div>
       </div>
     </div>
+</section>
+
+
+
+
+<!-- Manifesto Section -->
+
+
+
+<section class="projects-section bg-light" id="manifesto">
+        <h2 class="text-center mt-0">Manifesto</h2>
+            <hr class="divider my-4">
+            
+
+            <div class="container">
+
+                  <div class="row">
+                      <div class="col-lg-6" style="font-color:#282447;">
+                           <p><p><strong><h3>We are working </strong> </h3>   
+                           <p><p><strong><h3>to make brands </strong> </h3>   
+                           <p><p><strong><h3>more relevant by:</strong> </h3>   
+                       </div>
+
+                        <div class="col-lg-6">
+                            <p><p style="color:282447;"><strong><h3>.01</strong></h3>
+                            <p><p><strong><h4>EMBRACING COMPLEXITY</strong></h4>
+                            <p style="text-align: justify; font-family: 'Lato', sans-serif; text-justify: inter-word;">Complexity is the way things are. By embracing the way things are, we seek to understand them at the level where it helps us to get beyond the surface chaos to see connected trends, patterns and opportunities for growth.</p>
+
+                        </div>
+
+
+
+
+                  </div>
+
+              </div>
+
+            
+          <div class="container">
+
+                <div class="row">
+
+
+                	                        <div class="col-lg-6">
+                          <p><p><strong><h3 style="font-color:#6515dd;">.02</strong></h3></p>
+                            <p><p><strong><h4>LEAVING OUR COMFORT ZONE AT THE DOOR</strong></h4>
+                              <p style="text-align: justify; font-family: 'Lato', sans-serif;  text-justify: inter-word;">Great, otherwise unforeseen opportunities come from taking risks. We are naturally curious learners, constantly seeking for a new perspective to decode the full picture in every situation. </p>
+                        </div>
+
+
+                    <div class="col-lg-6">
+                        <p><p><strong><h3 style="font-color:#282447;">.03</strong></h3>
+                        <p><p><strong><h4>RECOGNIZING DATA IS MORE THAN JUST NUMBERS</strong></h4>
+
+                         <p style="text-align: justify; font-family: 'Lato', sans-serif;  text-justify: inter-word;">We know, first hand, that there is a lot of value in the numbers but to fully take advantage of that value it's paramount to understand the conditions in which numbers occur to unlock better decision making process.</p>
+
+                    </div>
+
+
+                    <div class="col-sm-4">
+
+                    </div>
+
+
+                </div>
+          </div>
+
   </section>
 
 
 
+<!--Clients-->   
+ <section class="py-5" id="clients">
+
+          <h2 class="text-center mt-0">Clients</h2>
+  <hr class="divider my-4">
+
+    <div class="container">
+        <div class="col-lg-12">
+          <img class="img-fluid d-block mx-auto" src="img/clients/logo-clients.svg" alt="Clients logos"></img>
+        </div>
+</div>
+
+
+</section>
 
 
 
   <!-- Expertise Section -->
-  <section class="projects-section bg-light" id="expertise">
-    <div class="container" style="font-family:'PT Mono', monospace;">
-      <h2 class="text-center mt-0">Our Expertise</h2>
-      <hr class="divider my-4">
-      <div class="row">
+<section class="projects-section bg-light" id="expertise">
 
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fa fa-4x fa-star-half-o text-primary mb-4"></i>
-            <h3 class="h4 mb-2" style="font-family:'PT Mono', monospace;"></h3>
-             <p class="text-muted mb-0">Influencer Marketing Strategy</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fa fa-4x fa-connectdevelop text-primary mb-4"aria-hidden="true"></i>
-            <h3 class="h4 mb-2" style="font-family:'PT Mono', monospace;"></h3>
-            <p class="text-muted mb-0">Digital Business Development & Partnerships</p>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fa fa-4x fa-pie-chart text-primary mb-4" aria-hidden="true"></i>
-            <h3 class="h4 mb-2" style="font-family:'PT Mono', monospace;"></h3>
-            <p class="text-muted mb-0">Strategic Research & Analysis</p>
-          </div>
-        </div>
-
-       <div class="col-lg-3 col-md-6 text-center">
-          <div class="mt-5">
-            <i class="fa fa-4x fa-linode text-primary mb-4" aria-hidden="true"></i>
-            <h3 class="h4 mb-2" style="font-family:'PT Mono', monospace;"></h3>
-            <p class="text-muted mb-0">SM Competitive Intelligence</p>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-  </section>
-
-
-
-
-
-<!--Reports Section
-
-  <section id="researchanalysis" class="projects-section bg-light">
-
-    <div class="container">
-      <h2 class="text-center mt-0">Intelligence & Analysis </h2>
-      <hr class="divider my-4">
-
-
-<!--riga 1
-<div class="row" style="font-family:'PT Mono', monospace;">
-<div class="col-md-4">
-          <div class="col-lg-* col-md-10 mx-auto">
-            <div class="site-heading">
-            <a href="https://cases.veltmon.com/products/tiktok-best-practices-and-benchmarks-for-talent-creators">
-              <img class="img-fluid" src="img/analysis/tiktok-best-practices-and-benchmarks-for-talent-creators-report.png" alt="Intelligence">
-            </a>
-         <div class="card-body">
-              <h6 class="card-title">
-            <center><a class="btn btn-primary" href="https://cases.veltmon.com/products/tiktok-best-practices-and-benchmarks-for-talent-creators">View Details</a></center>
-            </div>
-          </div>
-        </div>
-        </div>
-
-<br>
-<br>
-<br>
+<h2 class="text-center mt-0">Capabilities</h2>
+  <hr class="divider my-4">
 <br>
 <br>
 
+     <div class="container">
+                  <div class="row" >
+                    <div class="col-sm-4">
+                      <img class="img-fluid d-block mx-auto" src="img/analysis.svg" alt=""></img>
+                      <center><p><p><strong>ANALYSIS</strong> </p></center>
 
-<div class="col-md-4">
-          <div class="col-lg-* col-md-10 mx-auto">
-            <div class="site-heading">
-            <a href="https://cases.veltmon.com/products/refashion-week-best-voices">
-              <img class="img-fluid" src="img/analysis/refashion-week-new-york-best-voices.png" alt="Report">
-            </a>
-         <div class="card-body">
-              <h6 class="card-title">
-            <center><a class="btn btn-primary" href="https://cases.veltmon.com/products/refashion-week-best-voices">View Details</a></center>
-            </div>
-          </div>
-        </div>
-        </div>
+                            <p style="font-family: 'Lato', sans-serif;">Influencer Marketing Campaigns (KPI Monitoring & Reporting)</p>
+                            <p style="font-family: 'Lato', sans-serif;">Digital Assets/Channels Audit</p>
+                            <p style="font-family: 'Lato', sans-serif;">Creators & Talents Social Media Audit</p>
 
+                    </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div class="col-md-4">
-          <div class="col-lg-* col-md-10 mx-auto">
-            <div class="site-heading">
-            <a href="https://cases.veltmon.com/products/top-engaging-influencer-voices-new-york-fashion-week-2020">
-              <img class="img-fluid" src="img/analysis/fashion-revolution-week-2020-influencers-covid.png" alt="Report">
-            </a>
-         <div class="card-body">
-              <h6 class="card-title">
-            <center><a class="btn btn-primary" href="https://cases.veltmon.com/products/top-engaging-influencer-voices-new-york-fashion-week-2020">View Details</a></center>
-            </div>
-          </div>
-        </div>
-        </div>
-
-
-      </h6></div>
-
-
-</div>
-
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<!--riga2
-<div class="container">
-<div class="row" style="font-family:'PT Mono', monospace;">
+                    <div class="col-sm-4">
+                      <img class="img-fluid d-block mx-auto" src="img/strategy.svg" alt=""></img>
+                          <center><p><p><strong>STRATEGY</strong> </p></center>
+                          <p style="font-family: 'Lato', sans-serif;">Influencer Marketing Plan</p>
+                          <p style="font-family: 'Lato', sans-serif;">Campaign Scaling</p>
+                          <p style="font-family: 'Lato', sans-serif;">Business Development & Parnterships</p>
         
-<div class="col-md-4">
-          <div class="col-lg-* col-md-10 mx-auto">
-            <div class="site-heading">
-            <a href="https://cases.veltmon.com/products/top-engaging-eco-sustainable-influencers-on-instagram-europe-edition">
-              <img class="img-fluid" src="img/analysis/eco-sustainable-influencers-europe-instagram-pdf.png" alt="*">
-            </a>
-         <div class="card-body">
-              <h6 class="card-title">
-            <center><a class="btn btn-primary" href="https://cases.veltmon.com/products/top-engaging-eco-sustainable-influencers-on-instagram-europe-edition">View Details</a></center>
-            </div>
-          </div>
-        </div>
-        </div>
+                    </div>
+                    <div class="col-sm-4">
+                      <img class="img-fluid d-block mx-auto" src="img/intelligence.svg" alt=""></img>
+                      <center><p><p><strong>INTELLIGENCE</strong> </p></center>
+                         <p style="font-family: 'Lato', sans-serif;">Competition Evaluation & Benchmarking </p>
+                    </div>
 
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<div class="col-md-4">
-          <div class="col-lg-* col-md-10 mx-auto">
-            <div class="site-heading">
-            <a href="https://cases.veltmon.com/products/top-engaging-eco-sustainable-influencers-on-instagram-united-states-edition">
-              <img class="img-fluid" src="img/analysis/eco-sustainable-influencers-united-states-instagram-pdf.png" alt="*">
-            </a>
-         <div class="card-body">
-              <h6 class="card-title">
-            <center><a class="btn btn-primary" href="https://cases.veltmon.com/products/top-engaging-eco-sustainable-influencers-on-instagram-united-states-edition">View Details</a></center>
-            </div>
-          </div>
-        </div>
-        </div>
-
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<div class="col-md-4">
-          <div class="col-lg-* col-md-10 mx-auto">
-            <div class="site-heading">
-            <a href="https://cases.veltmon.com/products/top-engaging-influencer-voices-new-york-fashion-week-2020">
-              <img class="img-fluid" src="img/analysis/top-engaging-influencers-instagram-new-york-fashion-week-2020-pdf.png" alt="">
-            </a>
-         <div class="card-body">
-              <h6 class="card-title">
-            <center><a class="btn btn-primary" href="https://cases.veltmon.com/products/top-engaging-influencer-voices-new-york-fashion-week-2020">View Details</a></center>
-            </div>
-          </div>
-        </div>
-        </div>
-
-
-      </h6></div>
-
-
-</div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<!--riga3
-<div class="container">
-<div class="row" style="font-family:'PT Mono', monospace;">
-<div class="col-md-4">
-          <div class="col-lg-* col-md-10 mx-auto">
-            <div class="site-heading">
-            <a href="https://cases.veltmon.com/products/goop-com-sales-strategy">
-              <img class="img-fluid" src="img/analysis/goop-case-digital-sales-strategy-pdf.png" alt="*">
-            </a>
-         <div class="card-body">
-              <h6 class="card-title">
-            <center><a class="btn btn-primary" href="https://cases.veltmon.com/products/goop-com-sales-strategy">View Details</a></center>
-            </div>
-          </div>
-        </div>
-        </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<div class="col-md-4">
-          <div class="col-lg-* col-md-10 mx-auto">
-            <div class="site-heading">
-            <a href="https://cases.veltmon.com/products/top-engaging-influencer-voices-milan-fashion-week-2020">
-              <img class="img-fluid" src="img/analysis/top-engaging-influencers-instagram-milano-fashion-week-2020-pdf.png" alt="*">
-            </a>
-         <div class="card-body">
-              <h6 class="card-title">
-            <center><a class="btn btn-primary" href="https://cases.veltmon.com/products/top-engaging-influencer-voices-milan-fashion-week-2020">View Details</a></center>
-            </div>
-          </div>
-        </div>
-        </div>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-
-
-<div class="col-md-4">
-          <div class="col-lg-* col-md-10 mx-auto">
-            <div class="site-heading">
-            <a href="https://cases.veltmon.com/products/strategy-report-analysis-1?variant=32332182847621">
-              <img class="img-fluid" src="img/analysis/victoria-beckam-beauty-digital-channel-strategy.png" alt="*">
-            </a>
-         <div class="card-body">
-              <h6 class="card-title">
-            <center><a class="btn btn-primary" href="https://cases.veltmon.com/products/strategy-report-analysis-1?variant=32332182847621s">View Details</a></center>
-            </div>
-          </div>
-        </div>
-        </div>
-
-</h6></div>
-
-<div class="container h-100" style="font-family:'PT Mono', monospace;"> 
-      <div class="row h-100 align-items-center justify-content-center text-center">
-        <div class="col-lg-10 align-self-end">
-        </div>
-        <div class="col-lg-8 align-self-baseline">
-          <br>
-          <br>
-          <br>
-          <a class="btn btn-primary btn-xl js-scroll-trigger" href="https://cases.veltmon.com/collections/all">View all pubblications</a>
-        </div>
+                  </div>
       </div>
-    </div>
-
 </section>
 
-End  Research & Analysis Section-->
 
 
 
+<!-- Projects Section -->
 
-
- <!-- Projects Section -->
-
-  <!--<section id="researchanalysis" class="projects-section bg-light">
+  <section id="perspectives" class="projects-section">
     <div class="container">
 
-      <!-- Featured Project Row 
+      <!-- Featured Project Row -->
       <div class="row align-items-center no-gutters mb-4 mb-lg-5">
         <div class="col-xl-8 col-lg-7">
-          <img class="img-fluid mb-3 mb-lg-0" src="en/img/header-report-influencer-marketing-2021.jpg" alt="Influencer Marketing Trends & Strategies 2021 Report">
+          <img class="img-fluid mb-3 mb-lg-0" src="img/header-report-influencer-marketing-2021.svg" alt="Influencer Marketing Trends & Strategies 2021 Report">
         </div>
         <div class="col-xl-4 col-lg-5">
           <div class="featured-text text-center text-lg-left">
             <h4></h4>
             <br>
-            <p class="text-black-50 mb-0">Industry Insights for Brands and Social Media Content Creators</p>
+            <p class="text-black-50 mb-0"></p>
 
             <div class="card-body">
               <h6 class="card-title">
-            <center><a class="btn btn-primary" href="https://resources.veltmon.com/download-pdf-report-influencer-marketing-2021">Download Report</a></center>
+            <center><a class="btn btn-primary" href="https://resources.veltmon.com/download-pdf-report-influencer-marketing-2021" style="font-family: 'Lato', sans-serif; font-size: 0.8rem">GET YOUR COPY</a></center>
             </div>
             <br>         
           </div>
@@ -672,21 +405,26 @@ End  Research & Analysis Section-->
 
 <br>
 <br>
-<br>-->
+<br>
 
 
-       <!--Project 1 Row 
+       <!--Project 1 Row -->
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
         <div class="col-lg-6">
-          <img class="img-fluid" src="en/img/covid-impact-influencer-marketing-report-veltmon-fullsize.png" alt="COVID-19 & Influencer Marketing Report">
+          <img class="img-fluid" src="img/covid-impact-influencer-marketing-report-veltmon.svg" alt="COVID-19 & Influencer Marketing [Report]">
         </div>
         <div class="col-lg-6">
           <div class="bg-black text-center h-100 project">
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
                 <h4 class="text-black">COVID-19 & Influencer Marketing</h4>
-                <p class="mb-0 text-black-50">Between March and April 2020, we surveyed 450+ content and talent creators with a combined fanbase across all social media channels up to 35M, based in the US, Canada and Europe, who create content for the industry of Fashion, Luxury, Lifestyle and Beauty to better understand how COVID-19 has impacted their organic and sponsored activities, and the relationship with their audience.</p>
+                <p class="mb-0 text-black-50" style="font-family: 'Lato', sans-serif; text-align: justify; text-justify: inter-word;">Between March and April 2020, we surveyed 450+ content and talent creators with a combined fanbase across all social media channels up to 35M, based in the US, Canada and Europe, who create content for the industry of Fashion, Luxury, Lifestyle and Beauty to better understand how COVID-19 has impacted their organic and sponsored activities, and the relationship with their audience.</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
+                <div class="card-body">
+              <h6 class="card-title">
+
+            <center><a class="btn btn-primary" style="font-family: 'Lato', sans-serif; font-size: 0.8rem" href="https://resources.veltmon.com/covid-19-influencer-marketing/">GET YOUR COPY</a></center>
+            </div>
               </div>
             </div>
           </div>
@@ -694,10 +432,6 @@ End  Research & Analysis Section-->
       </div>
 
 
-
-<br>
-<br>
-<br>
 
 
       <!-- Project 2 Row 
@@ -710,16 +444,14 @@ End  Research & Analysis Section-->
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
                 <h4 class="text-black">Chiara Ferragni x Lancôme</h4>
-                <p class="mb-0 text-black-50">KPI tracking, analysis + monitoring</p>
+                <p class="mb-0 text-black-50">KPI + campaign analysis</p>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
             </div>
           </div>
         </div>
-      </div>
-<br>
-<br>
-<br>-->
+      </div>-->
+
 
       <!-- Project 3 Row 
       <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
@@ -731,18 +463,16 @@ End  Research & Analysis Section-->
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-left">
                 <h4 class="text-black">Aimee Song x Revolve</h4>
-                <p class="mb-0 text-black-50">KPI tracking, analysis + monitoring</p>
+                <p class="mb-0 text-black-50">talent analysis</p>
                 <hr class="d-none d-lg-block mb-0 ml-0">
               </div>
             </div>
           </div>
         </div>
-      </div>
+      </div>-->
 
 
-<br>
-<br>
-<br>-->
+
 
       <!-- Project 4 Row 
       <div class="row justify-content-center no-gutters">
@@ -754,103 +484,17 @@ End  Research & Analysis Section-->
             <div class="d-flex h-100">
               <div class="project-text w-100 my-auto text-center text-lg-right">
                 <h4 class="text-black">#Sephora Squad</h4>
-                <p class="mb-0 text-black-50">talent performance analysis + benchmark</p>
+                <p class="mb-0 text-black-50">campaign performance analysis</p>
                 <hr class="d-none d-lg-block mb-0 mr-0">
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div> 
-  </section>  -->
+    </div> -->
+  </section>  
 
 
-  <!-- Portfolio Section 
-  <section id="portfolio">
-    <div class="container-fluid p-0" style="font-family:'PT Mono', monospace;">
-      <div class="row no-gutters">
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/kylie-jenner-kylie-skin.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/kylie-jenner-kylie-skin.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Digital Business Analysis
-              </div>
-              <div class="project-name">
-                Kylie Skin
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/rihanna-and-lvmh-to-start-luxury-fashion-brand.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/rihanna-and-lvmh-to-start-luxury-fashion-brand.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Business of Influence Analysis
-              </div>
-              <div class="project-name">
-                Rihanna x LVMH
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/aimee-song-collection-revolve.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/aimee-song-collection-revolve.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Business of Influence Analysis
-              </div>
-              <div class="project-name">
-                Aimee Song x Revolve
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          </a>
-          <a class="portfolio-box" href="img/portfolio/fullsize/sephora-squad-program.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/sephora-squad-program.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Influencers Analysis
-              </div>
-              <div class="project-name">
-                Sephora Squad Program 2019
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/chiara-ferragni-lancome-capsule-collection.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/chiara-ferragni-lancome-capsule-collection.jpg" alt="">
-            <div class="portfolio-box-caption">
-              <div class="project-category text-white-50">
-                Campaign Analysis
-              </div>
-              <div class="project-name">
-                Chiara Ferragni x Lancome Capsule Collection
-              </div>
-            </div>
-          </a>
-        </div>
-        <div class="col-lg-4 col-sm-6">
-          <a class="portfolio-box" href="img/portfolio/fullsize/kourtney-kardashian-poosh.jpg">
-            <img class="img-fluid" src="img/portfolio/thumbnails/kourtney-kardashian-poosh.jpg" alt="">
-            <div class="portfolio-box-caption p-3">
-              <div class="project-category text-white-50">
-                Digital Business Analysis
-              </div>
-              <div class="project-name">
-                Poosh by Kourtney Kardashian
-              </div>
-            </div>
-          </a>
-        </div>
-      </div>
-    </div>
-  </section> -->
 
   <!-- Call to Action Section 
 
@@ -859,92 +503,11 @@ End  Research & Analysis Section-->
       <h2 class="mb-4">Free Download at Start Bootstrap!</h2>
       <a class="btn btn-light btn-xl" href="https://www.veltmon.com/report/covid-the-impact-on-digital-creators-and-brands.pdf">Download Now!</a>
     </div>
-  </section> -->
+  </section> 
+
+  -->
 
 
-  <!-- Data Partners 
-  <section class="py-5"id="clients">
-    <div class="container" >
-
-          <br>
-          <br>
-          <br>
-          <br>
-
-      <div class="row">
-        <div class="col-md-3 col-sm-8">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/barbour-logo.png" alt="Veltmon's Clients">
-
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-8">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/Ferrero-Logo.png" alt="Veltmon's Clients">
-
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-8">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/FeelingFelt_Logo.png" alt="Veltmon's Clients">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-8">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/Deloitte_Logo.png" alt="Veltmon's Clients">
-          </a>
-        </div>
-
-          <br>
-          <br>
-          <br>
-          <br>
-
-          <div class="col-md-3 col-sm-8">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/Logo-Fortunale.png" alt="Veltmon's Clients">
-          </a>
-        </div>
-          <div class="col-md-3 col-sm-8">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/womsh-logo.png" alt="Veltmon's Clients">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-8">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/" alt="Veltmon's Clients">
-          </a>
-        </div>
-        <div class="col-md-3 col-sm-8">
-          <a href="#">
-            <img class="img-fluid d-block mx-auto" src="img/logos/FWD-Logo.png" alt="Veltmon's Clients">
-          </a>
-        </div>
-
-      </div>
-    </div>
-  </section> -->
-
-
- <!-- Signup Section 
-  <section id="signup" class="signup-section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-10 col-lg-8 mx-auto text-center">
-
-          <i class="far fa-paper-plane fa-2x mb-2 text-white"></i>
-          <h2 class="text-white mb-5">Subscribe to receive updates!</h2>
-          <hr class="divider my-4">
-
-          <form class="form-inline d-flex">
-            <input type="email" class="form-control flex-fill mr-0 mr-sm-2 mb-3 mb-sm-0" id="inputEmail" placeholder="Enter email address...">
-            <button type="submit" class="btn btn-primary mx-auto">Subscribe</button>
-          </form>
-
-        </div>
-      </div>
-    </div>
-  </section>-->
 
 
 
@@ -952,36 +515,68 @@ End  Research & Analysis Section-->
 
 
   <!-- Contact Section -->
-  <section class="page-section" id="contact">
-    <div class="container" style="font-family:'PT Mono', monospace;">
-      <div class="row justify-content-center">
-        <div class="col-lg-8 text-center">
-          <h2 class="mt-0">Make better business decisions</h2>
-          <hr class="divider my-4">
-          <p class="text-muted mb-5">Get in touch today for expert and independent advice, insights and intelligence to navigate the changing landscape and develop a successful digital business strategy.</p>
-        </div>
+  <section class="page-section bg-light" id="contact">
+     <div class="container">
+
+<h2 class="text-center mt-0">Contact</h2>
+  <hr class="divider my-4">
+          
+          <div class="row" style="font-family: 'Lato', sans-serif; text-align: justify; text-justify: inter-word;"> 
+              <div class="col-md-1">
+
+              </div>
+
+              <div class="col-md-4">
+
+                <p><strong>NEW BUSINESS</strong></p>
+                <p><a href="mailto:ml.veltri@veltmon.com?Subject=New%20Business" target="_top">ml.veltri@veltmon.com </a></strong></p>
+
+              </div>
+
+
+              <div class="col-md-4">
+                 <p><strong>MEDIA INQUIRIES</strong></p>
+                 <p><a href="mailto:inquiries@veltmon.com?Subject=Media%20Inquiries" target="_top">media@veltmon.com </a></strong></p>
+
+              </div>
+
+
+              <div class="col-md-3">
+                 <p><strong>WORK WITH US</strong></p>
+                 <p><a href="mailto:join@veltmon.com?Subject=Join%20Us" target="_top">join@veltmon.com </a></strong></p>
+
+              </div>
+
+          </div>
+
+      
+      
       </div>
-      <div class="row">
-        <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-          <i class="fas fa-phone fa-3x mb-3 text-muted"></i>
-          <div>+1 (201) 744-5442</div>
-        </div>
-        <div class="col-lg-4 mr-auto text-center">
-          <i class="fas fa-envelope fa-3x mb-3 text-muted"></i>
-          <!-- Make sure to change the email address in anchor text AND the link below! -->
-          <a class="d-block" href="mailto:itsme@veltmon.com">contact@veltmon.com</a>
-        </div>
-      </div>
-    </div>
-  </section>
+
+
+
+
+      <div class="container">
+
+            <img class="img-fluid d-block mx-auto" src="img/nyc.svg" alt=""></img>
+
+
+       </div>
+
+
+     
+</div>
+</section>
+
+
 
   <!-- Footer -->
   <footer class="bg-light py-5">
     <div class="container">
-      <div class="small text-center text-muted"> &copy; 2019 VELTMON Digital Business Strategy Consulting, LLC | <a href="privacy-policy.html"> Privacy Policy</a> | <a href="cookie-policy.html"> Cookie Policy</a></div>
+      <div class="small text-center text-muted"> &copy; 2021 VELTMON Digital Business Strategy Consulting, LLC | <a href="privacy-policy.html"> Privacy Policy</a> | <a href="cookie-policy.html"> Cookie Policy</a></div>
 
-      <div class="small text-center text-muted">Photo Credits: Photo by WebFactory Ltd | Unsplash </div>
-    </div> <!-- Gautam Krishnan-->
+      <div class="small text-center text-muted"> </div>
+    </div> 
   </footer>
 
   <!-- Bootstrap core JavaScript -->
@@ -995,73 +590,11 @@ End  Research & Analysis Section-->
   <!-- Custom scripts for this template -->
   <script src="js/creative.min.js"></script>
 
+
+
 </body>
 
 </html>
 
 
-<!-- Begin Mailchimp Signup Form 
-<link href="//cdn-images.mailchimp.com/embedcode/classic-10_7.css" rel="stylesheet" type="text/css">
-<style type="text/css">
-  #mc_embed_signup{background:#fff; clear:left; font:14px Helvetica,Arial,sans-serif; }
-  /* Add your own Mailchimp form style overrides in your site stylesheet or in this style block.
-     We recommend moving this block and the preceding CSS link to the HEAD of your HTML file. */
-</style>
-<style type="text/css">
-  #mc-embedded-subscribe-form input[type=checkbox]{display: inline; width: auto;margin-right: 10px;}
-  #mergeRow-gdpr {margin-top: 20px;}
-  #mergeRow-gdpr fieldset label {font-weight: normal;}
-  #mc-embedded-subscribe-form .mc_fieldset{border:none;min-height: 0px;padding-bottom:0px;}
-</style>
-<div id="mc_embed_signup">
-<form action="https://veltmon.us6.list-manage.com/subscribe/post?u=ce22fdd832869280ceb3587d4&amp;id=25711f0663" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-    <div id="mc_embed_signup_scroll">
-  <h2>Subscribe</h2>
-
-
-<div class="indicates-required"><span class="asterisk">*</span> indicates required</div>
-<div class="mc-field-group">
-  <label for="mce-EMAIL">Email Address  <span class="asterisk">*</span>
-</label>
-  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
-</div>
-<div class="mc-field-group">
-  <label for="mce-FNAME">First Name </label>
-  <input type="text" value="" name="FNAME" class="" id="mce-FNAME">
-</div>
-<div class="mc-field-group">
-  <label for="mce-LNAME">Last Name </label>
-  <input type="text" value="" name="LNAME" class="" id="mce-LNAME">
-</div>
-<div class="mc-field-group size1of2">
-  <label for="mce-MMERGE3">Phone Number </label>
-  <input type="text" name="MMERGE3" class="" value="" id="mce-MMERGE3">
-</div>
-<div id="mergeRow-gdpr" class="mergeRow gdpr-mergeRow content__gdprBlock mc-field-group">
-    <div class="content__gdpr">
-        <label>How do we use your information?</label>
-        <p>Please select all the ways you would like to hear from Veltmon Digital Business Strategy Consulting, LLC:</p>
-        <fieldset class="mc_fieldset gdprRequired mc-field-group" name="interestgroup_field">
-    <label class="checkbox subfield" for="gdpr_1613"><input type="checkbox" id="gdpr_1613" name="gdpr[1613]" value="Y" class="av-checkbox "><span>EMAIL</span> </label>
-        </fieldset>
-        <p>You can unsubscribe at any time by clicking the link in the footer of our emails. 
-
-
-ltFor information about our privacy practices, please visit our website https://www.veltmon.com/privacy-policy.</p>
-    </div>
-    <div class="content__gdprLegal">
-        <p>We use Mailchimp as our marketing platform. By clicking below to subscribe, you acknowledge that your information will be transferred to Mailchimp for processing. <a href="https://mailchimp.com/legal/" target="_blank">Learn more about Mailchimp's privacy practices here.</a></p>
-    </div>
-</div>
-  <div id="mce-responses" class="clear">
-    <div class="response" id="mce-error-response" style="display:none"></div>
-    <div class="response" id="mce-success-response" style="display:none"></div>
-  </div>     real people should not fill this in and expect good things - do not remove this or risk form bot signups
-    <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_ce22fdd832869280ceb3587d4_25711f0663" tabindex="-1" value=""></div>
-    <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-    </div>
-</form>
-</div>
-<script type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js'></script><script type='text/javascript'>(function($) {window.fnames = new Array(); window.ftypes = new Array();fnames[0]='EMAIL';ftypes[0]='email';fnames[1]='FNAME';ftypes[1]='text';fnames[2]='LNAME';ftypes[2]='text';fnames[3]='MMERGE3';ftypes[3]='phone';}(jQuery));var $mcj = jQuery.noConflict(true);</script>
-<!--End mc_embed_signup-->
 
